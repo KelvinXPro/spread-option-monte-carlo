@@ -1,0 +1,42 @@
+[
+  {
+    "field": "spot_1",
+    "pathwise": 0.2826002984641029,
+    "pathwise_standard_error": 0.00116193355388478,
+    "exact_finite_difference": 0.285420441824179,
+    "difference": -0.0028201433600761328,
+    "difference_in_pathwise_se": -2.427112420195918,
+    "within_3_pathwise_se": true,
+    "exact_bump": 0.026267001342773398
+  },
+  {
+    "field": "spot_2",
+    "pathwise": -0.16605017929122307,
+    "pathwise_standard_error": 0.0006853765189218812,
+    "exact_finite_difference": -0.16758392384505258,
+    "difference": 0.0015337445538295136,
+    "difference_in_pathwise_se": 2.2378131019751626,
+    "within_3_pathwise_se": true,
+    "exact_bump": 0.01771000061035156
+  },
+  {
+    "field": "volatility_1",
+    "pathwise": 82.29864167100523,
+    "pathwise_standard_error": 0.4723789174551477,
+    "exact_finite_difference": 83.31911129753067,
+    "difference": -1.0204696265254398,
+    "difference_in_pathwise_se": -2.1602776686627494,
+    "within_3_pathwise_se": true,
+    "exact_bump": 0.0001
+  },
+  {
+    "field": "volatility_2",
+    "pathwise": 6.587042835177766,
+    "pathwise_standard_error": 0.1210800664127737,
+    "exact_finite_difference": 6.601847454135168,
+    "difference": -0.014804618957401594,
+    "difference_in_pathwise_se": -0.12227131513895285,
+    "within_3_pathwise_se": true,
+    "exact_bump": 0.0001
+  }
+]

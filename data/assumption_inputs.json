@@ -1,0 +1,38 @@
+{
+  "retrieved_date": "2026-10-28",
+  "purpose": "Frozen ancillary inputs for ONE-FACTOR assumption comparisons; no live downloads during reproduction.",
+  "treasury_1y": {
+    "date": "2025-03-07",
+    "quoted_par_yield": 0.0405,
+    "continuous_proxy": 0.04009539060755622,
+    "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2025&type=daily_treasury_yield_curve",
+    "convention": "Convert semiannual bond-equivalent par yield using 2*log(1+y/2); flat risk-free proxy, not a bootstrapped zero curve."
+  },
+  "tsm_dividend": {
+    "source": "https://investor.tsmc.com/english/dividends",
+    "asof": "2025-03-07",
+    "definition": "Trailing four gross cash dividends actually PAID by valuation date, per ADS, divided by unmodified valuation spot; constant continuous-yield proxy. No future dividend or FX information.",
+    "payments": [
+      {
+        "period": "3Q23",
+        "payment_date": "2024-04-11",
+        "usd_per_ads": 0.545597
+      },
+      {
+        "period": "4Q23",
+        "payment_date": "2024-07-11",
+        "usd_per_ads": 0.539924
+      },
+      {
+        "period": "1Q24",
+        "payment_date": "2024-10-09",
+        "usd_per_ads": 0.624826
+      },
+      {
+        "period": "2Q24",
+        "payment_date": "2025-01-09",
+        "usd_per_ads": 0.608106
+      }
+    ]
+  }
+}

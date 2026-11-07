@@ -1,0 +1,5 @@
+method,nodes,price,error_estimate
+gauss_hermite,100.0,21.81484376409182,
+gauss_hermite,128.0,21.814843764091812,
+gauss_hermite,256.0,21.814843764091854,
+adaptive_quad,,21.814843764091833,2.17122634484085e-11

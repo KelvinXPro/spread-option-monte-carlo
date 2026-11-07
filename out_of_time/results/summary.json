@@ -1,0 +1,78 @@
+{
+  "status": "COMPLETED_SINGLE_PATH",
+  "valuation_date": "2025-03-07",
+  "calendar_expiry": "2026-03-07",
+  "settlement_reference_date": "2026-03-06",
+  "settlement_convention": "Preceding trading close proxy; original contract does not specify a holiday adjustment. No Saturday market close exists.",
+  "settlement_closes": {
+    "TSLA": 396.73,
+    "TSM": 338.89
+  },
+  "payoff_at_reference_close": 0.0,
+  "payoff_is_single_realization_not_pricing_validation": true,
+  "primary_delta_method": "Original CRN central 1%-spot bump, 500000 paths, seed 20260903; fixed h and sigma/rho/r.",
+  "premium_received": 21.561243548159304,
+  "model_inputs_frozen": {
+    "spot_1": 262.670013427734,
+    "spot_2": 177.1000061035156,
+    "volatility_1": 0.6362179459975725,
+    "volatility_2": 0.40487107795355565,
+    "correlation": 0.2400065621184363,
+    "risk_free_rate": 0.0431,
+    "maturity": 1.0,
+    "strike": 200.0,
+    "hedge_ratio": 1.4831733730952126,
+    "dividend_yield_1": 0.0,
+    "dividend_yield_2": 0.0
+  },
+  "actual_market_closes": 251,
+  "observed_return_intervals": 250,
+  "terminal_short_option_delta_hedged_pnl": 15.169913083893173,
+  "daily_hedging_error_std_dollars_ddof1": 0.25948295678605343,
+  "daily_hedging_error_mean_dollars": 0.06067248757225221,
+  "realized_simple_return_estimates": {
+    "volatility_1": 0.603264707412582,
+    "volatility_2": 0.3779304460188573,
+    "correlation": 0.530668792250909,
+    "annualized_mean_return_1": 0.5959179181971672,
+    "annualized_mean_return_2": 0.7256213636693921,
+    "observations": 250
+  },
+  "model_vs_realized": {
+    "sigma_tsla_model": 0.6362179459975725,
+    "sigma_tsla_realized": 0.603264707412582,
+    "sigma_tsm_model": 0.40487107795355565,
+    "sigma_tsm_realized": 0.3779304460188573,
+    "rho_model": 0.2400065621184363,
+    "rho_realized": 0.530668792250909
+  },
+  "error_attribution": [
+    {
+      "component": "initial_main_MC_price_minus_exact_model",
+      "terminal_dollars": -0.2647664177214042
+    },
+    {
+      "component": "main_CRN_delta_vs_exact_FD_delta",
+      "terminal_dollars": 0.05038712010663282
+    },
+    {
+      "component": "TSLA_realized_quadratic_variation_vs_model",
+      "terminal_dollars": 9.162042826871847
+    },
+    {
+      "component": "TSM_realized_quadratic_variation_vs_model",
+      "terminal_dollars": 1.811795183480009
+    },
+    {
+      "component": "realized_cross_variation_vs_model_covariance",
+      "terminal_dollars": 4.191239853755298
+    },
+    {
+      "component": "discrete_hedging_higher_order_and_carry_residual",
+      "terminal_dollars": 0.2192145174007898
+    }
+  ],
+  "data_sha256": "51a7c1aff34f859e8eb8b2895fb6a6607bae61e822446eb2e87d5c5fa8c95c75",
+  "frictions": "Frictionless zero-dividend model ledger: zero transaction fees, zero stock borrow fees, zero cash dividends. Cash earns/pays the original r on ACT/365 calendar intervals.",
+  "interpretation": "A single realized path cannot establish pricing accuracy or terminal hedge-error variance. Gamma-weighted variation attribution is a second-order accounting approximation, not a causal identification of the error. Residual includes discrete hedge/jump/higher-order effects; omitted real dividends/fees are an additional limitation."
+}

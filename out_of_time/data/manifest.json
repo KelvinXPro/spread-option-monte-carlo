@@ -1,0 +1,24 @@
+{
+  "provider": "LSEG Workspace local desktop Python API",
+  "session": "desktop.workspace",
+  "sdk_version": "2.1.1",
+  "field": "TRDPRC_1",
+  "adjustments": [
+    "unadjusted"
+  ],
+  "interval": "1D",
+  "rics": [
+    "TSLA.O",
+    "TSM.N"
+  ],
+  "requested_start": "2025-03-07",
+  "requested_end": "2026-03-07",
+  "retrieved_at": "2026-10-29T01:25:42.646791-04:00",
+  "observations": 251,
+  "first_date": "2025-03-07",
+  "last_date": "2026-03-06",
+  "files": {
+    "lseg_raw_close.csv": "c3f6f6eb792323a948083614ff7df0551819c393ded1de9e07a8d3e71a70ad40",
+    "tsla_tsm_close.csv": "51a7c1aff34f859e8eb8b2895fb6a6607bae61e822446eb2e87d5c5fa8c95c75"
+  }
+}

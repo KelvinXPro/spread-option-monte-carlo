@@ -1,0 +1,91 @@
+{
+  "source_period": {
+    "price_history_start": "2020-01-02",
+    "price_history_end": "2025-03-07",
+    "calibration_window": "2024-01-02 to 2024-12-31",
+    "valuation_date": "2025-03-07",
+    "calibration_prices": 252,
+    "calibration_returns": 251,
+    "return_type": "simple"
+  },
+  "data_sha256": "4101faa1544069d19e3e9e0b75df8365f328657aea7769a9b4c239750ae43ec4",
+  "estimated_parameters": {
+    "volatility_1": 0.6362179459975725,
+    "volatility_2": 0.40487107795355565,
+    "correlation": 0.2400065621184363,
+    "annualized_mean_return_1": 0.685614059676598,
+    "annualized_mean_return_2": 0.7639427739918628,
+    "observations": 251
+  },
+  "model_inputs": {
+    "spot_1": 262.670013427734,
+    "spot_2": 177.1000061035156,
+    "volatility_1": 0.6362179459975725,
+    "volatility_2": 0.40487107795355565,
+    "correlation": 0.2400065621184363,
+    "risk_free_rate": 0.0431,
+    "maturity": 1.0,
+    "strike": 200.0,
+    "hedge_ratio": 1.4831733730952126,
+    "dividend_yield_1": 0.0,
+    "dividend_yield_2": 0.0
+  },
+  "monte_carlo": {
+    "price": 21.561243548159304,
+    "standard_error": 0.12912829126483363,
+    "confidence_low": 21.30815209728023,
+    "confidence_high": 21.814334999038376,
+    "paths": 500000,
+    "seed": 20260903
+  },
+  "kirk_approximation": 21.79599447333502,
+  "monte_carlo_minus_kirk": -0.23475092517571738,
+  "relative_difference": -0.010770370008255831,
+  "exact_conditional_integral": 21.814843764091812,
+  "quadrature_nodes": 128,
+  "adaptive_quadrature_check": {
+    "price": 21.814843764091833,
+    "estimated_error": 2.17122634484085e-11,
+    "difference_vs_gh128": 2.1316282072803006e-14
+  },
+  "quadrature_128_vs_256_difference": 4.263256414560601e-14,
+  "kirk_relative_error_vs_exact": -0.0008640580221719166,
+  "mc_error_in_standard_errors": -1.963939996792729,
+  "bump_and_revalue_risk": {
+    "delta_tsla": 0.2826557537177128,
+    "delta_tsm": -0.16609607190312514,
+    "vega_tsla_per_1pct": 0.8230234503474154,
+    "vega_tsm_per_1pct": 0.0658397467425278,
+    "correlation_sensitivity_per_1pct": -0.20587910555556022
+  },
+  "variance_reduction_details": {
+    "antithetic": {
+      "payoff_evaluations": 500000,
+      "independent_samples": 250000
+    },
+    "control_variate": {
+      "payoff_evaluations": 510000,
+      "independent_samples": 500000,
+      "pilot_paths": 10000,
+      "coefficients": [
+        0.37763200209630043,
+        -0.14068562907075588
+      ],
+      "analytic_control_expectations": [
+        262.670013427734,
+        262.670013427734
+      ]
+    },
+    "conditional_mc": {
+      "payoff_evaluations": 500000,
+      "independent_samples": 500000
+    }
+  },
+  "greeks_contract_convention": "h fixed for all spot bumps and pathwise derivatives",
+  "limitations": [
+    "Historical calibration; constant risk-neutral GBM volatility and correlation.",
+    "No dividends and the original 4.31% rate in the main result.",
+    "Dividend and historical-rate inputs are isolated one-factor proxy comparisons.",
+    "Exact means numerical evaluation of this GBM model, not an observed market price."
+  ]
+}
